@@ -5,7 +5,7 @@ class csvss:
     self.i=0
     self.ii=False
 
-  def __next__(self)->str:
+  def __next__(self)->list:
 
     while(1):
       if self.ii==True:
