@@ -6,9 +6,9 @@ class openss:
   def __next__(self):
       try:
         s=self.into.readline()
-        s=s.replace("\r","")
-        if s!="":
-          
+        
+        if s:
+          s=s.replace("\r","")
           return s
         else:
             self.into.close()
