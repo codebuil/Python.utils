@@ -30,7 +30,11 @@ class xyzc:
     return self
 
 print("\x1bc\x1b[43;30m")
-
-for x,y,z,c in xyzc("0,0,0,6;0,0,1,6;0,1,0,6;1,0,0,6"):
-    print(f"X:{x},Y:{y},Z:{z},Color:{c}")
-
+x=[0,0,0,0]
+y=[0,0,0,0]
+z=[0,0,0,0]
+c=[0,0,0,0]
+indexs=0
+for x[indexs],y[indexs],z[indexs],c[indexs] in xyzc("0,0,0,6;0,0,1,6;0,1,0,6;1,0,0,6"):
+    print(f"X:{x[indexs]},Y:{y[indexs]},Z:{z[indexs]},Color:{c[indexs]}")
+    indexs+=1
