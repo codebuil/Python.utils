@@ -41,7 +41,7 @@ xx=16
 yy=11
 print("\x1bc\x1b[43;30m")
 a1:str=arraysb(xx,yy,"*")
-a2:str=arraysb(xx,yy," ")
+a2:str=arraysb(xx,yy,"*")
 for n in range(10):
     a1=setarray(xx,yy," ",random.randint(0,xx-1),random.randint(0,yy-1),a1)
 
