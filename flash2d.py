@@ -34,19 +34,27 @@ def setarray(w:int,h:int,value:str,x:int,y:int,arrayss:str):
   a=a+arrayss[y*(w+1)+x+1:]
   return a
 
-def report(s:str):
-    print("\x1b[1;1d"+s)
+def report(xx:int,yy:int,s:str,ss:str,xxx,yyy):
+    a1=s
+    sss=s
+    for n in range(10):
+        sss=a1
+        a1=setarray(xx,yy,ss,xxx[n],yyy[n],sss)
+    print("\x1b[1;1d"+a1)
+    
 
 xx=16
 yy=11
 print("\x1bc\x1b[43;30m")
 a1:str=arraysb(xx,yy,"*")
-a2:str=arraysb(xx,yy,"*")
+x=[]
+y=[]
 for n in range(10):
-    a1=setarray(xx,yy," ",random.randint(0,xx-1),random.randint(0,yy-1),a1)
+    x.append(random.randint(0,xx-1))
+    y.append(random.randint(0,yy-1))
 
-for n in range(100):
-    report(a1)
+for n in range(200):
+    report(xx,yy,a1," ",x,y)
     sleeps(1)
-    report(a2)
+    report(xx,yy,a1,"*",x,y)
     sleeps(1)
