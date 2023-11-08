@@ -4,16 +4,16 @@ class Text:
         self.linhas = []  # Armazena o conteúdo das linhas
 
     def insertline(self, linha):
-        self.linhas_numero.append(len(self.linhas) + 1)
+        self.linhas_numero.append(len(self.linhas))
         self.linhas.append(linha)
 
     def referencit(self, linha, index):
-        self.linhas_numero.insert(index, len(self.linhas) + 1)
-        self.linhas.insert(index, linha)
+        self.linhas_numero.insert(index, len(self.linhas))
+        self.linhas.append(linha)
 
     def report(self):
         for idx in self.linhas_numero:
-            print(self.linhas[idx - 1])
+            print(self.linhas[idx])
 
 def main():
     texto = Text()
@@ -23,7 +23,7 @@ def main():
     for linha in linhas_separadas:
         texto.insertline(linha)
 
-    
+    texto.referencit("------------",0)
 
     texto.report()  # Imprime todas as linhas do texto
 
